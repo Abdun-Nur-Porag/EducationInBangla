@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/CDN/css/beer.min.css">
+ <script type="module"src="/CDN/js/v1.0.0/beer.min.js"></script>
+ <script src="/CDN/js/v1.0.0/globalTag.js"></script>
+ <script src="/CDN/js/v1.0.0/lithium.js"></script>
+ 
+<script src="/CDN/js/v1.0.0/widgets/appBar.js"></script>
+
+ <script src="/CDN/js/v1.0.0/widgets/align.js"></script>
+ <script src="/CDN/js/v1.0.0/widgets/list.js"></script>
+</head>
+<style>
+  #D49D1F
+</style>
+
+<body>
+  <div class="root">
+    
+  </div>
+  <script>
+  appBar().class({
+    back:"transparent"
+  }).add(".root").child([
+    appBarBody().child([
+      appBarLeft().child([
+        
+          button().class({
+    back: "transparent",
+    shape: "circle"
+  }).html("<i>arrow_back</i>").attrs({
+    onClick:"goBack()"
+  })
+ , span().text("প্রধান পৃষ্ঠা")
+        ]),
+      appBarCenter(),
+      appBarRight()
+      
+      ])
+    
+    ])
+    function goBack() {
+      window.open("index.html")
+    }
+    
+    const center_body_1=alignCenter().class({
+      back:"transparent"
+    }).add(".root")
+  
+    
+    
+    const phy_1th_item=list().child([
+      
+      //list item
+      listItem().class({
+  ripple: "slow-ripple"
+}).attrs({
+        onClick:"openPhy_1()"
+      }).child([
+      listItemLeft().child([
+        button().class({
+          type:"circle"
+        }).backgroundColor("#2AB97C").fontColor("white").text("প")
+        ]),
+      listItemCenter().child([
+        listItemTitle().text("পদার্থবিজ্ঞান ১ম পএ"),
+        listItemSubTitle().text("ভেক্টর,কাজ শক্তি, নিউটনীয়...")
+        ]),
+      listItemRight().child([
+       img().class({
+         size:"small"
+       }).attrs({
+         src:"/svg/arrow-forward-ui-svgrepo-com.svg"
+       }) 
+        ])
+     ]),
+    ,
+    /*======PHYSICS 2ND PAPAER ======*/
+           listItem().class({
+             ripple:"slow-ripple"
+           }).attrs({
+        onClick: "openPhy_2()"
+      }).child([
+        listItemLeft().child([
+          button().class({
+            type: "circle"
+          }).backgroundColor("#D49D1F").fontColor("white").text("প")
+        ]),
+        listItemCenter().child([
+          listItemTitle().text("পদার্থবিজ্ঞান 2ম পএ"),
+          listItemSubTitle().text("তাপ গতি বিদ্যা,স্থির তরিৎ, চল তরিৎ...")
+        ]),
+        listItemRight().child([
+          img().class({
+            size: "small"
+          }).attrs({
+            src: "/svg/arrow-forward-ui-svgrepo-com.svg"
+          })
+        ])
+      ])
+      
+      ])
+      
+     function openPhy_1() {
+       window.open("phy/phy_1.html")
+     }
+  
+     function openPhy_2() {
+   window.open("phy/phy_2.html")
+ }
+    center_body_1.child([phy_1th_item])
+  </script>
+</body>
+
+</html>

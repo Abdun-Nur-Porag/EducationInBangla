@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/CDN/css/beer.min.css">
+  <script type="module" src="/CDN/js/v1.0.0/beer.min.js"></script>
+  <script src="/CDN/js/v1.0.0/globalTag.js"></script>
+  <script src="/CDN/js/v1.0.0/lithium.js"></script>
+  <script src="/CDN/js/v1.0.0/widgets/appBar.js"></script>
+  <script src="/CDN/js/v1.0.0/widgets/align.js"></script>
+  <script src="/CDN/js/v1.0.0/widgets/list.js"></script>
+</head>
+
+<body>
+  <div class="root"></div>
+  <script>
+    const colorDB = {
+      "১": "#3498db",
+      "২": "#e74c3c",
+      "৩": "#2ecc71",
+      "৪": "#f1c40f",
+      "৫": "#9b59b6",
+      "৬": "#1abc9c",
+      "৭": "#d35400"
+    };
+
+    appBar().class({
+      back: "transparent"
+    }).add(".root").child([
+      appBarBody().child([
+        appBarLeft().child([
+          button().class({
+            back: "transparent",
+            shape: "circle"
+          }).html("<i>arrow_back</i>").attrs({
+            onClick: "goBack()"
+          }),
+          span().text("বইয়ের নাম")
+        ]),
+        appBarCenter(),
+        appBarRight()
+      ])
+    ]);
+
+    function goBack() {
+      window.open("../phy.html");
+    }
+
+    const db = [
+      { l_name: "ভেক্টর", s_no: "১", file_link: "", s_title: "১ম অধ্যায়,পদার্থবিজ্ঞান ১য় পএ" },
+      { file_link: "", l_name: "নিউটনিয়ান বলবিদ্যা", s_no: "২", s_title: "২য় অধ্যায়,পদার্থবিজ্ঞান ১য় পএ" },
+      { file_link: "", l_name: "কাজ,শক্তি,ক্ষমতা", s_no: "৩", s_title: "৩য় অধ্যায়,পদার্থবিজ্ঞান ১য় পএ" },
+      { file_link: "", l_name: "মহাকর্ষ ও অভিকর্ষ", s_no: "৪", s_title:"৪র্থ অধ্যায়,পদার্থবিজ্ঞান ১য় পএ" },
+      { file_link: "", l_name: "পদার্থের গাঠনিক ধর্ম", s_no: "৫", s_title: "৫ম অধ্যায়,পদার্থবিজ্ঞান ১য় পএ" },
+      { file_link: "", l_name: "পর্যায়বৃও গতি", s_no: "৬", s_title: "৬ষ্ঠ অধ্যায়,পদার্থবিজ্ঞান ১য় পএ" },
+      { file_link: "", l_name: "আদর্শ গ্যাস ও গতিতও্ব", s_no: "৭", s_title: "৭ম অধ্যায়,পদার্থবিজ্ঞান ১য় পএ" }
+    ];
+
+    const myList = list().class({ list: "list" }).add(".root");
+
+    db.forEach(data => {
+      let attrsObj = {};
+      if (data.file_link.trim() !== "") {
+        attrsObj.onClick = data.file_link;
+      }
+
+      const li = listItem().class({ ripple: "slow-ripple" }).attrs(attrsObj).child([
+        listItemLeft().child([
+          button().class({ type: "circle" }).backgroundColor(colorDB[data.s_no] || "#bdc3c7").fontColor("white").text(data.s_no)
+        ]),
+        listItemCenter().child([
+          listItemTitle().text(data.l_name),
+          listItemSubTitle().text(data.s_title)
+        ]),
+        listItemRight().child([
+          img().class({ size: "small" }).attrs({
+            src: "/svg/arrow-forward-ui-svgrepo-com.svg"
+          })
+        ])
+      ]);
+
+      myList.child([li]);
+    });
+  </script>
+</body>
+
+</html>

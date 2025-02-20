@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Pay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+  
+  </style>
+      <!--added--->
+    <link rel="stylesheet" href="/CDN/css/beer.min.css">
+    <script src="/CDN/js/v1.0.0/lithium.js"></script>
+    <script src="/CDN/js/v1.0.0/globalTag.js"></script>
+    <script type="module" src="/CDN/js/v1.0.0/beer.min.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/align.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/appBar.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/appBody.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/appBox.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/card.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/dialog.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/drawer.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/layout.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/list.js"></script><!--
+ <script src="/CDN/js/v1.0.0/widgets/menu.js"></script>-->
+    <script src="/CDN/js/v1.0.0/widgets/popup.js"></script>
+    
+    <!--added-->
+</head>
+<body>
+  <div class="main">
+    
+
+    <script>
+    drawer().child([
+      drawerItem().class({
+        is_riple:"show-ripple"
+      }).child([
+        drawerItemLeft().text("home"),
+        drawerItemCenter().text("Home"),
+        drawerItemRight().text("->")
+        
+        ])
+      
+      ]).add(".main")
+    </script>
+   
+  </div>
+</body>
+</html>

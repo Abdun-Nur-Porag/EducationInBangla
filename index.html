@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/CDN/css/beer.min.css">
+ <script type="module"src="/CDN/js/v1.0.0/beer.min.js"></script>
+ <script src="/CDN/js/v1.0.0/globalTag.js"></script>
+ <script src="/CDN/js/v1.0.0/lithium.js"></script>
+ 
+<script src="/CDN/js/v1.0.0/widgets/appBar.js"></script>
+
+ <script src="/CDN/js/v1.0.0/widgets/align.js"></script>
+
+</head>
+
+<body>
+  <div class="root">
+   
+  </div>
+
+
+  <script>
+    appBar().class({
+      back:"transparent"
+    }).child([
+      appBarBody().class({
+  back: "transparent"
+}).child([
+        appBarLeft().child([
+         
+          ])
+      //app bar center
+     , 
+      appBarCenter().child([])
+     , 
+     //app bar right
+     appBarRight().child([
+       
+         button().class({
+    back: "transparent",
+    shape: "circle"
+  }).html("<i>info</i>")
+       
+       
+      , 
+       button().class({
+         back:"transparent",
+         shape:"circle"
+       }).html("<i>person</i>")
+       
+      
+       ])
+        ])
+      ]).add(".root")
+      
+
+//creating app box
+
+      // button  for
+     const nav_1=nav().class({
+       padding:"padding"
+     })
+      //var phusics button
+      const physics_bt=button()
+     .class({
+       vartical:"vertical",
+       no_round:"no-round",
+       size:"extra",
+       back:"transparent",
+       is_ripple:"ripple"
+       
+     }).attrs({
+       onclick:"openPhy()"
+     })
+     .width("")
+    .child([
+      //icon
+      img().class({
+        size:"responsive"
+      }).attrs({
+        src:"/svg/physics-svgrepo-com (1).svg"
+      })
+      //
+     , 
+      span().text("পদার্থবিজ্ঞান")
+      ])
+      
+      function openPhy() {
+        window.open("phy.html")
+      }
+       
+      
+     //chemistry
+     
+      const chemistry_bt=button()
+     .class({
+       vartical:"vertical",
+       no_round:"no-round",
+       size:"extra",
+       back:"transparent",
+       is_ripple:"ripple",
+       
+     }).width("")
+    .child([
+      //icon
+      img().class({
+        size:"responsive"
+      }).attrs({
+        src:"/svg/chemistry-svgrepo-com (1).svg"
+      })
+      //
+     , 
+      span().text("রসায়ন")
+      ])
+     
+     
+     
+     nav_1.child([physics_bt,chemistry_bt])
+     //nav 2
+     const nav_2=nav().class({
+       pasdding:"padding"
+     })/*.class({
+       back:"transpa"
+     })*/
+     //math
+       const math_bt=button()
+     .class({
+       vartical:"vertical",
+       no_round:"no-round",
+       size:"extra",
+       back:"transparent",
+       is_ripple:"ripple"
+       
+     }).width("")
+    .child([
+      //icon
+      img().class({
+        size:"responsive"
+      }).attrs({
+        src:"/svg/math-wiki-svgrepo-com.svg"
+      })
+      //
+     , 
+      span().text("উচ্চতর গণিত")
+      ])
+      //more button
+  const more=button()
+  .class({
+    vartical: "vertical",
+    no_round: "no-round",
+    size: "extra",
+    back: "transparent",
+    is_ripple: "ripple"
+    
+  }).width("")
+  .child([
+    //icon
+    img().class({
+      size: "responsive"
+    }).attrs({
+      src: "/svg/settings-svgrepo-com.svg"
+    })
+    //
+    ,
+    span().text("সেটিংস")
+  ])
+     nav_2.child([math_bt,more])
+    
+  
+  //align center
+  const centerAlign_1=alignCenter().child([nav_1]).class({
+    back:"transparent"
+  }).add(".root")
+  const centerAlign_2=alignCenter().child([nav_2]).class({
+    back:"transparent"
+  }).add(".root")
+  
+  //console.log(centerAlign_1,centerAlign_2)
+  </script>
+  
+</body>
+
+</html>

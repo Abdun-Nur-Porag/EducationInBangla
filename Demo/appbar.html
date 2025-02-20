@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Pay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+  
+  </style>
+      <!--added--->
+    <link rel="stylesheet" href="/CDN/css/beer.min.css">
+    <script src="/CDN/js/v1.0.0/lithium.js"></script>
+    <script src="/CDN/js/v1.0.0/globalTag.js"></script>
+    <script type="module" src="/CDN/js/v1.0.0/beer.min.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/align.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/appBar.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/appBody.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/appBox.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/card.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/dialog.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/drawer.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/layout.js"></script>
+    <script src="/CDN/js/v1.0.0/widgets/list.js"></script><!--
+ <script src="/CDN/js/v1.0.0/widgets/menu.js"></script>-->
+    <script src="/CDN/js/v1.0.0/widgets/popup.js"></script>
+    
+    <!--added-->
+</head>
+<body>
+  <div class="main">
+ 
+    <script>
+    const themes = (theme_name) => create("body");
+
+const ui = (key, value) => {
+    if (value === undefined) {
+        return localStorage.getItem(key);
+    }
+    localStorage.setItem(key, value);
+};
+
+const applyTheme = async () => {
+    const mode = ui("mode") || "auto"; // Default mode
+    const theme = await ui("theme") || "color"; // Default theme
+
+    switch (mode) {
+        case "dark":
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+            break;
+        case "light":
+            document.body.classList.add("light-mode");
+            document.body.classList.remove("dark-mode");
+            break;
+        default:
+            document.body.classList.remove("light-mode", "dark-mode");
+            break;
+    }
+
+    switch (theme) {
+        case "color":
+            document.body.style.background = "#1e1e1e";
+            document.body.style.color = "#ffffff";
+            break;
+        case "blob":
+            document.body.style.background = "linear-gradient(45deg, #ff6b6b, #f06595)";
+            break;
+        case "file":
+            document.body.style.backgroundImage = "url('your-file-path.jpg')";
+            break;
+        case "url":
+            document.body.style.backgroundImage = "url('https://example.com/image.jpg')";
+            break;
+        default:
+            document.body.style.background = "";
+            break;
+    }
+};
+
+// Example Usage:
+// Get mode
+console.log(ui("mode"));
+
+// Set mode to dark
+ui("mode", "dark");
+
+// Get theme
+(async () => {
+    console.log(await ui("theme"));
+})();
+
+// Set theme to blob
+ui("theme", "color");
+
+// Apply the selected theme
+applyTheme();
+
+    appBar().child([
+      appBarBody().child([
+        appBarLeft().child([
+          create("i").text("home")
+          ])
+       , 
+       appBarCenter().child([
+         create("i").text("person"),
+         create("i").text("info"),
+         create("i").text("info")
+         ])
+      , 
+       appBarRight().child([
+         create("i").text("info")
+         ])
+      
+     
+        
+        ])
+      ]).add("body")
+    
+    
+    
+    </script>
+   
+  </div>
+</body>
+</html>

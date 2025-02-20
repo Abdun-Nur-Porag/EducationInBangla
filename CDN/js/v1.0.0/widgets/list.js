@@ -1,6 +1,6 @@
 const list=()=>create("ul").class({
   type:"list",
-  border:"border"
+  
 })
 const listItem=()=>create("li")
 

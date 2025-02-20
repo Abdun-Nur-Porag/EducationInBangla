@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/CDN/css/beer.min.css">
+  <script type="module" src="/CDN/js/v1.0.0/beer.min.js"></script>
+  <script src="/CDN/js/v1.0.0/globalTag.js"></script>
+  <script src="/CDN/js/v1.0.0/lithium.js"></script>
+  <script src="/CDN/js/v1.0.0/widgets/list.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="top">
+      <button class="transparent circle" onclick="goback()"><i>arrow_back</i></button>
+      <span></span>
+      <div class="max"></div>
+    </nav>
+  </header>
+  
+  <style>
+    img {
+      width: 80%;
+    }
+    
+    [id^="hover-it"]:hover {
+      background-color: #58AD6E;
+      color: white;
+    }
+  </style>
+  
+  <img src="/svg/liui.png" class="responsive padding">
+  
+  <article class="transparent padding">
+    <div id="menu"></div>
+    <script>
+      const item = list().add("#menu");
+      
+      function createListItem(title, subtitle, icon, id) {
+        return listItem().child([
+          listItemLeft().html(`<i>${icon}</i>`).fontColor("white"),
+          listItemCenter().child([
+            listItemTitle().text(title),
+            listItemSubTitle().text(subtitle)
+          ]),
+          listItemRight()
+        ]).id(id).radius("5px").border("2px solid #58AD6E").style({
+        
+        });
+      }
+      
+      const appCode = navigator.appCodeName;
+      const userLang = navigator.language;
+      const userAgent ="Mozilla" //navigator.userAgent;
+      const appName = navigator.appName;
+      const platform = navigator.platform;
+      const vendor = navigator.vendor;
+      const hardwareConcurrency = navigator.hardwareConcurrency;
+      const maxTouchPoints = navigator.maxTouchPoints;
+      
+      const items = [
+        createListItem("About Author", "", "person", "hover-it-1"),
+        createListItem("App Code Name", appCode, "code", "hover-it-2"),
+        createListItem("User Language", userLang, "language", "hover-it-3"),
+        createListItem("User Agent", userAgent, "devices", "hover-it-4"),
+        createListItem("App Name", appName, "apps", "hover-it-5"),
+        createListItem("Platform", platform, "computer", "hover-it-6"),
+        createListItem("Vendor", vendor, "storefront", "hover-it-7"),
+        createListItem("Hardware Concurrency", hardwareConcurrency, "memory", "hover-it-8"),
+        createListItem("Max Touch Points", maxTouchPoints, "touch_app", "hover-it-9")
+      ];
+      
+      item.child(items);
+      
+      function about() {
+        window.open("about.html");
+      }
+      
+      function goback() {
+        window.open("index.html");
+      }
+    </script>
+  </article>
+</body>
+
+</html>

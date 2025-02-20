@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2b2b2b;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 350px;
+            background: #3b3b3b;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #555;
+        }
+        .profile h2 {
+            margin: 10px 0 5px;
+            font-size: 20px;
+        }
+        .profile p {
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+        .buttons {
+            margin-top: 15px;
+            text-align: center;
+        }
+        button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Author Picture">
+            <h2>Abdun Nur Poarg</h2>
+            <p>Software Developer | UI Enthusiast |</p>
+            <p>Author of this app. All Rights Reserved by Abdun Nur Poarg.</p>
+        </div>
+        <div class="buttons">
+            <button onclick="openLicense()">View License</button>
+        </div>
+    </div>
+
+    <script>
+        function openLicense() {
+            window.open('/LISENCE.md', '_blank');
+        }
+    </script>
+</body>
+</html>

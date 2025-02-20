@@ -50,14 +50,14 @@
     }
 
     const db = [
-      { l_name: "তাপগতিবিদ্যা", s_no: "১", file_link: "", s_title: "১ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
-      { file_link: "", l_name: "স্থির তরিৎ", s_no: "২", s_title: "২য় অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
-      { file_link: "", l_name: "চল তরিৎ", s_no: "৩", s_title: "৩য় অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
-      { file_link: "", l_name: "ভৌত আলোকবিজ্ঞান", s_no: "৬", s_title: "৭ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
-      { file_link: "", l_name: "আধুনিক পদার্থবিজ্ঞান", s_no: "৪", s_title: "৮ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
-      { file_link: "", l_name: "পরমানুর মডেল", s_no: "৫", s_title: "৯ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
+      { l_name: "তাপগতিবিদ্যা", s_no: "১", file_link: "c1()", s_title: "১ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
+      { file_link: "c2()", l_name: "স্থির তরিৎ", s_no: "২", s_title: "২য় অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
+      { file_link: "c3()", l_name: "চল তরিৎ", s_no: "৩", s_title: "৩য় অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
+      { file_link: "c4()", l_name: "ভৌত আলোকবিজ্ঞান", s_no: "৬", s_title: "৭ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
+      { file_link: "c5()", l_name: "আধুনিক পদার্থবিজ্ঞান", s_no: "৪", s_title: "৮ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
+      { file_link: "c6()", l_name: "পরমানুর মডেল", s_no: "৫", s_title: "৯ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" },
       
-      { file_link: "", l_name: " সেমিকন্ডাক্টর ও ইলেকট্রনিক্স", s_no: "৭", s_title: "১০ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" }
+      { file_link: "c7()", l_name: " সেমিকন্ডাক্টর ও ইলেকট্রনিক্স", s_no: "৭", s_title: "১০ম অধ্যায়,পদার্থবিজ্ঞান ২য় পএ" }
     ];
 
     const myList = list().class({ list: "list" }).add(".root");
@@ -85,6 +85,32 @@
 
       myList.child([li]);
     });
+    
+    
+       /*open file*/
+    
+    function c1() {
+      window.open("2/c1.html")
+    }
+    function c2() {
+  window.open("2/c2.html")
+}
+function c3() {
+  window.open("2/c3.html")
+}
+function c4() {
+  window.open("2/c4.html")
+}
+function c5() {
+  window.open("2/c5.html")
+}
+function c6() {
+  window.open("2/c6.html")
+}
+function c7() {
+  window.open("2/c7.html")
+}
+    
   </script>
 </body>
 

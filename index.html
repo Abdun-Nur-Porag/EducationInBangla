@@ -155,6 +155,8 @@
     back: "transparent",
     is_ripple: "ripple"
     
+  }).attrs({
+    onClick:"settings()"
   }).width("")
   .child([
     //icon
@@ -179,6 +181,12 @@
   }).add(".root")
   
   //console.log(centerAlign_1,centerAlign_2)
+  
+  
+  
+  function settings() {
+    window.open("settings.html")
+  }
   </script>
   
 </body>

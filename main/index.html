@@ -1,27 +1,24 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-<link rel="stylesheet" href="../CDN/css/beer.min.css">
-
-  
-    <script type="module" src="/CDN/js/v1.0.0/beer.min.js"></script>
-    <script src="/CDN/js/v1.0.0/globalTag.js"></script>
-    <script src="/CDN/js/v1.0.0/lithium.js"></script>
-    <script src="lithium.ui.min.js"></script>
-  
-<script src="index.js"></script>
-
-
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="es5/tex-mml-chtml.js"></script>
 </head>
-
-
 <body>
-  <div class="root"></div>
+  <p>Inline Math: $E=mc^2$</p>
+  <div>
+    \[
+      \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+    \]
+  </div>
+  <div>
+\[
+W=F.SCos\theta
+
+\]
+</div>
   
 </body>
-
-</html>
